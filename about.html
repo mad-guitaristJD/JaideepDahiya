@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me | Jaideep Dahiya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class = "wrapper">
+    <header>
+        <div class="profile">
+            <img src="profile_photo.jpeg" alt="Your Photo" id="profileContainer">
+            <div class="name-role">
+              <h1>Jaideep Dahiya</h1>
+              <h5>2nd Year Computer Science and Design student at IIIT Delhi</h5>
+            </div>
+          </div>
+        <nav>
+          <a href="about.html">About</a>
+          <a href="project.html">Projects</a>
+          <a href="https://leetcode.com/u/jaideepdahiya/" target="_blank">Leetcode</a>
+          <a href="https://www.linkedin.com/in/mad-guitaristjd" target="_blank">LinkedIn</a>
+          <a href="https://github.com/mad-guitaristJD" target="_blank">Github</a>
+        </nav>
+      </header>
+
+  <section class="page-content">
+    <h2>About Me</h2>
+    <p>Hello!!!  I'm Jaideep Dahiya, a 20-year-old second-year B.Tech student pursuing Computer Science and Design at IIIT Delhi. I’m deeply passionate about cybersecurity, with a strong curiosity for how systems work beneath the surface. I love to code and constantly push myself to break down complex problems into their core components to understand every intricate detail. Whether it's reverse engineering, exploring vulnerabilities, or simply experimenting with new technologies, I enjoy getting my hands dirty and learning from the ground up. Alongside my technical interests, I’m also a Grade 8 certified guitarist, which reflects my dedication, discipline, and love for creative expression. I'm always eager to grow, build, and contribute to exciting tech-driven environments.</p>
+    <br><br>
+    <h2>Skills</h2>
+  <ul class="achievement-list">
+    <li>Tools and Technologies: Wireshark, tcpdump, nmap, MySQL, LibGDX, Linux,
+        Raspberry Pi, Vim, Virtual machine</li>
+    <li>Programming Languages: C, C++
+        , Java, Python</li>
+    <li>Technical Electives: Operating Systems, Data Structures and Algorithms, DBMS
+        Computer Organisation, Algorithm Design and Analysis</li>
+  </ul>
+  <br><br>
+    <h2>Achievements</h2>
+  <ul class="achievement-list">
+    <li>Google Cybersecurity Professional Certificate</li>
+    <li>150+ questions on leetcode</li>
+    <li>Tech council member @IIIT Delhi (AY 2024-2025)</li>
+    <li>Rockschool London Grade 8 Guitarist</li>
+  </ul>
+  </section>
+
+  <footer>
+    <p>© 2025 Jaideep Dahiya</p>
+  </footer>
+</div>
+<button id="cssToggle">Disable CSS</button>
+<script>
+    const toggleButton = document.getElementById('cssToggle');
+    const linkTag = document.querySelector('link[rel="stylesheet"]');
+    const profileContainer = document.getElementById('profileContainer');
+  
+    let cssDisabled = false;
+  
+    toggleButton.addEventListener('click', () => {
+      cssDisabled = !cssDisabled;
+  
+      // Disable/Enable CSS
+      linkTag.disabled = cssDisabled;
+  
+      // Hide/Show Profile
+      profileContainer.style.display = cssDisabled ? 'none' : 'block';
+  
+      // Update button text
+      toggleButton.textContent = cssDisabled ? 'Enable CSS' : 'Disable CSS';
+    });
+  </script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Jaideep Dahiya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class = "wrapper">
+    <header>
+        <div class="profile">
+            <img src="profile_photo.jpeg" alt="Your Photo" id="profileContainer">
+            <div class="name-role">
+              <h1>Jaideep Dahiya</h1>
+              <h5>2nd Year Computer Science and Design student at IIIT Delhi</h5>
+            </div>
+          </div>
+        <nav>
+          <a href="about.html">About</a>
+          <a href="project.html">Projects</a>
+          <a href="https://leetcode.com/u/jaideepdahiya/" target="_blank">Leetcode</a>
+          <a href="https://www.linkedin.com/in/mad-guitaristjd" target="_blank">LinkedIn</a>
+          <a href="https://github.com/mad-guitaristJD" target="_blank">Github</a>
+        </nav>
+      </header>
+
+  <section class="page-content">
+    <h2>Projects</h2>
+
+    <div class="project-card">
+      <h3>Signature-based IDS</h3>
+      <p>● Developed a signature-based Intrusion Detection System (IDS) hosted on a Raspberry Pi 4.<br>
+        ● Detects network threats, including port scans, brute-force attacks, and known exploits.<br>
+        ● Real-time alerting via Telegram/WhatsApp for immediate threat response.<br>
+        ● Utilized Python, Scapy, and threat intelligence feeds to analyze network traffic.</p><br>
+      <a href="http://github.com/mad-guitaristJD/intrusion-detection-system">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Angry Birds</h3>
+        <p>● Recreated the Angry Birds game using the Java LibGDX framework.<br>
+            ● Implemented realistic physics-based projectile motion using Box2D.<br>
+            ● Designed custom game levels, interactive UI, and engaging animations.<br>
+            ● Optimized performance to ensure smooth gameplay across different devices</p><br>
+        <a href="https://github.com/mad-guitaristJD/AngryBirds">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Byte Me</h3>
+        <p>● Developed a CLI-based canteen management system in Java.<br>
+            ● Implemented Object-Oriented Programming (OOP) principles<br>
+            ● It features order management, a billing system, and inventory tracking.<br>
+            ● Utilized file handling for persistent data storage and exception handling for robustness.</p><br>
+        <a href="https://github.com/mad-guitaristJD/Byte-Me-">View on GitHub</a>
+      </div>
+    
+      
+
+
+  </section>
+
+  <footer>
+    <p>© 2025 Jaideep Dahiya</p>
+  </footer>
+</div>
+
+<button id="cssToggle">Disable CSS</button>
+<script>
+    const toggleButton = document.getElementById('cssToggle');
+    const linkTag = document.querySelector('link[rel="stylesheet"]');
+    const profileContainer = document.getElementById('profileContainer');
+  
+    let cssDisabled = false;
+  
+    toggleButton.addEventListener('click', () => {
+      cssDisabled = !cssDisabled;
+  
+      // Disable/Enable CSS
+      linkTag.disabled = cssDisabled;
+  
+      // Hide/Show Profile
+      profileContainer.style.display = cssDisabled ? 'none' : 'block';
+  
+      // Update button text
+      toggleButton.textContent = cssDisabled ? 'Enable CSS' : 'Disable CSS';
+    });
+  </script>
+</body>
+</html>
