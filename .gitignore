@@ -1,0 +1,42 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS metadata for folders
+Icon?
+._*
+
+# macOS resource fork files
+.Spotlight-V100
+.Trashes
+
+# macOS disk image files
+*.dmg
+*.sparseimage
+
+# macOS indexing
+*.swp
+
+# macOS Finder Tags
+.metadata_never_index
+
+# macOS Quick Look
+*.qlgenerator
+
+# macOS Time Machine
+.backupdb/
+
+# Thumbnails
+._*
+
+# VSCode or JetBrains IDEs (optional, if you're using these)
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# System-wide crash reports
+*.crash
+

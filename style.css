@@ -23,13 +23,13 @@
 .name-role h1 {
   font-size: 1.8rem;
   margin-bottom: 5px;
-  color: #fefefe;
+  color: #39FF14;
 }
 
 .name-role h5 {
   font-size: 1rem;
   font-weight: normal;
-  color: #ccc; /* lighter than the name for contrast */
+  color: #37ff1468; /* lighter than the name for contrast */
   margin: 0;
 }
 
@@ -39,9 +39,9 @@ html {
   height: 100%;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Space Mono', sans-serif;
   background-color: #1a1a1a;
-  color: #fefefe;
+  color: #39FF14;
   line-height: 1.6;
   padding: 20px;
   min-height: 100vh;
@@ -91,7 +91,7 @@ header h1 {
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: #39FF14;
   font-weight: bold;
   font-size: 20px;
 }
@@ -131,17 +131,14 @@ nav a:hover {
 
 .project-card h3 {
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #39FF14;
 }
 
 .project-card a {
-  color: #66ccff;
-  text-decoration: none;
-}
-
-.project-card a:hover {
+  color: #39FF14;
   text-decoration: underline;
 }
+
 
 #cssToggle {
   position: fixed;
