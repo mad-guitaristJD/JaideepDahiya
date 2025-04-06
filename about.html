@@ -6,6 +6,7 @@
   <title>About Me | Jaideep Dahiya</title>
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -17,16 +18,20 @@
             <img src="profile_photo.jpeg" alt="Your Photo" id="profileContainer">
             <div class="name-role">
               <h1>Jaideep Dahiya</h1>
-              <h5>2nd Year Computer Science and Design student at IIIT Delhi</h5>
+              <h5>2nd Year Computer Science Student</h5>
+              <h3 id="typed-text" class="typewriter"></h3>
             </div>
           </div>
-        <nav>
-          <a href="about.html">About</a>
-          <a href="project.html">Projects</a>
-          <a href="https://leetcode.com/u/jaideepdahiya/" target="_blank">Leetcode</a>
-          <a href="https://www.linkedin.com/in/mad-guitaristjd" target="_blank">LinkedIn</a>
-          <a href="https://github.com/mad-guitaristJD" target="_blank">Github</a>
-        </nav>
+          <nav class="navbar">
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+          
+            <ul class="nav-links">
+              <li><a href="about.html">About</a></li>
+              <li><a href="project.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
       </header>
 
   <section class="page-content">
@@ -34,17 +39,16 @@
     <p>Hello!!!  I'm Jaideep Dahiya, a 20-year-old second-year B.Tech student pursuing Computer Science and Design at IIIT Delhi. I’m deeply passionate about cybersecurity, with a strong curiosity for how systems work beneath the surface. I love to code and constantly push myself to break down complex problems into their core components to understand every intricate detail. Whether it's reverse engineering, exploring vulnerabilities, or simply experimenting with new technologies, I enjoy getting my hands dirty and learning from the ground up. Alongside my technical interests, I’m also a Grade 8 certified guitarist, which reflects my dedication, discipline, and love for creative expression. I'm always eager to grow, build, and contribute to exciting tech-driven environments.</p>
     <br><br>
     <h2>Skills</h2>
-  <ul class="achievement-list">
-    <li>Tools and Technologies: Wireshark, tcpdump, nmap, MySQL, LibGDX, Linux,
-        Raspberry Pi, Vim, Virtual machine</li>
-    <li>Programming Languages: C, C++
-        , Java, Python</li>
-    <li>Technical Electives: Operating Systems, Data Structures and Algorithms, DBMS
-        Computer Organisation, Algorithm Design and Analysis</li>
-  </ul>
+<ul class="skills-list">
+  <li><i class="fas fa-network-wired"></i> Tools & Technologies: Wireshark, tcpdump, nmap, MySQL, LibGDX, Linux, Raspberry Pi, Vim, Virtual Machine</li>
+  <li><i class="fas fa-code"></i> Programming Languages:  C,  C++, Java, Python
+  </li>
+  <li><i class="fas fa-book-open"></i> Technical Electives: Operating Systems, DSA, DBMS, Computer Organisation, Algorithm Design & Analysis</li>
+</ul>
+
   <br><br>
     <h2>Achievements</h2>
-  <ul class="achievement-list">
+  <ul>
     <li>Google Cybersecurity Professional Certificate</li>
     <li>150+ questions on leetcode</li>
     <li>Tech council member @IIIT Delhi (AY 2024-2025)</li>
@@ -57,26 +61,8 @@
   </footer>
 </div>
 <button id="cssToggle">Disable CSS</button>
-<script>
-    const toggleButton = document.getElementById('cssToggle');
-    const linkTag = document.querySelector('link[rel="stylesheet"]');
-    const profileContainer = document.getElementById('profileContainer');
+<script src="script.js"></script>
   
-    let cssDisabled = false;
-  
-    toggleButton.addEventListener('click', () => {
-      cssDisabled = !cssDisabled;
-  
-      // Disable/Enable CSS
-      linkTag.disabled = cssDisabled;
-  
-      // Hide/Show Profile
-      profileContainer.style.display = cssDisabled ? 'none' : 'block';
-  
-      // Update button text
-      toggleButton.textContent = cssDisabled ? 'Enable CSS' : 'Disable CSS';
-    });
-  </script>
   
   
 </body>

@@ -22,14 +22,14 @@
 /* Container for name + role */
 .name-role h1 {
   font-size: 1.8rem;
-  margin-bottom: 5px;
-  color: #39FF14;
+  margin-bottom: -5px;
+  color: #ffffff;
 }
 
 .name-role h5 {
   font-size: 1rem;
   font-weight: normal;
-  color: #37ff1468; /* lighter than the name for contrast */
+  color: #ffffff; /* lighter than the name for contrast */
   margin: 0;
 }
 
@@ -41,7 +41,7 @@ html {
 body {
   font-family: 'Space Mono', sans-serif;
   background-color: #1a1a1a;
-  color: #39FF14;
+  color: #ffffff;
   line-height: 1.6;
   padding: 20px;
   min-height: 100vh;
@@ -91,7 +91,7 @@ header h1 {
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #39FF14;
+  color: #ffffff;
   font-weight: bold;
   font-size: 20px;
 }
@@ -131,14 +131,19 @@ nav a:hover {
 
 .project-card h3 {
   margin-bottom: 10px;
-  color: #39FF14;
+  color: #ffffff;
 }
 
 .project-card a {
-  color: #39FF14;
+  color: #4352ff;
   text-decoration: underline;
 }
 
+.project-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
 
 #cssToggle {
   position: fixed;
@@ -167,5 +172,106 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+.contact-list {
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.contact-list a {
+  color: #66ccff;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+.skills-list {
+  margin-top: 15px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.skills-list i {
+  margin-right: 8px;
+  color: #ffffff;
+}
+
+/* Always-visible hamburger menu */
+.navbar {
+  position: relative;
+}
+
+.navbar input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  color: #ffffff;
+}
+
+/* Nav links as vertical list */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: rgba(0,0,0,0.9);
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 10;
+  width: 160px;
+  text-align: right;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Show menu when hamburger is toggled */
+#menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+.typewriter {
+  color: #ffffffa3;
+  display: inline-block;
+  height: 1.5em;
+}
+.typewriter::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: #ffffff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 

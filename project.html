@@ -11,22 +11,26 @@
 </head>
 <body>
 <div class = "wrapper">
-    <header>
-        <div class="profile">
-            <img src="profile_photo.jpeg" alt="Your Photo" id="profileContainer">
-            <div class="name-role">
-              <h1>Jaideep Dahiya</h1>
-              <h5>2nd Year Computer Science and Design student at IIIT Delhi</h5>
-            </div>
-          </div>
-        <nav>
-          <a href="about.html">About</a>
-          <a href="project.html">Projects</a>
-          <a href="https://leetcode.com/u/jaideepdahiya/" target="_blank">Leetcode</a>
-          <a href="https://www.linkedin.com/in/mad-guitaristjd" target="_blank">LinkedIn</a>
-          <a href="https://github.com/mad-guitaristJD" target="_blank">Github</a>
-        </nav>
-      </header>
+  <header>
+    <div class="profile">
+        <img src="profile_photo.jpeg" alt="Your Photo" id="profileContainer">
+        <div class="name-role">
+          <h1>Jaideep Dahiya</h1>
+          <h5>2nd Year Computer Science Student</h5>
+          <h3 id="typed-text" class="typewriter"></h3>
+        </div>
+      </div>
+      <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+      
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+  </header>
 
   <section class="page-content">
     <h2>Projects</h2>
@@ -69,25 +73,6 @@
 </div>
 
 <button id="cssToggle">Disable CSS</button>
-<script>
-    const toggleButton = document.getElementById('cssToggle');
-    const linkTag = document.querySelector('link[rel="stylesheet"]');
-    const profileContainer = document.getElementById('profileContainer');
-  
-    let cssDisabled = false;
-  
-    toggleButton.addEventListener('click', () => {
-      cssDisabled = !cssDisabled;
-  
-      // Disable/Enable CSS
-      linkTag.disabled = cssDisabled;
-  
-      // Hide/Show Profile
-      profileContainer.style.display = cssDisabled ? 'none' : 'block';
-  
-      // Update button text
-      toggleButton.textContent = cssDisabled ? 'Enable CSS' : 'Disable CSS';
-    });
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
