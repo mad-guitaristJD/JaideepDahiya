@@ -49,7 +49,7 @@ body {
   overflow-x: hidden;
 
   /* 🔥 Fixed background image */
-  background-image: url('background_image.jpg');
+  background-image: url('background_image.jpg'); /* default */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -103,7 +103,7 @@ nav a:hover {
 /* Shared Section Style */
 .page-content h2 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   border-bottom: 2px solid #ffffff;
   padding-bottom: 5px;
   margin-top: 20px;
@@ -119,33 +119,91 @@ nav a:hover {
 }
 
 
-/* Project Cards */
 .project-card {
-  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 30px;
   padding: 20px;
-  margin-bottom: 20px;
-  border-left: 4px solid #ffffff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  border-radius: 8px;
-}
-
-.project-card h3 {
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.project-card a {
-  color: #4352ff;
-  text-decoration: underline;
+  border-radius: 12px;
+  background: #1f1f1f;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
 }
 
-#cssToggle {
+.project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.project-slider {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px; /* 🔧 CONTROL SLIDER WIDTH HERE */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔧 CONTROL IMAGE WIDTH/HEIGHT HERE */
+.slider-img {
+  width: 100%;            /* fills the slider width */
+  height: 300px;          /* 🔧 ADJUST HEIGHT HERE */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.743);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  font-size: 18px;
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column;
+  }
+
+  .project-slider {
+    max-width: 100%;
+  }
+
+  .slider-img {
+    height: 250px; /* Adjust for smaller screens */
+  }
+}
+
+
+
+#cssToggle, #modeToggle {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -161,10 +219,15 @@ nav a:hover {
   transition: background-color 0.3s ease;
 }
 
-#cssToggle:hover {
-  background-color: #ff0202;
+#cssToggle:hover,
+#modeToggle:hover {
+  background-color: #ff0000;
 }
-
+#modeToggle {
+  bottom: 60px; /* push above the CSS toggle */
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 /* Footer */
 footer {
@@ -236,7 +299,7 @@ footer {
   position: absolute;
   top: 40px;
   right: 0;
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.5);
   padding: 15px;
   border-radius: 10px;
   z-index: 10;
@@ -275,3 +338,67 @@ footer {
   50% { opacity: 0; }
 }
 
+
+/* 🌞 Light Mode Styles */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+body.light-mode .project-card {
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .navbar,
+body.light-mode footer,
+body.light-mode .hamburger  {
+  background-color: #ff000000;
+  color: #000;
+}
+
+body.light-mode .nav-links{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+body.light-mode a , 
+body.light-mode .skills-list i{
+  color: #000000da;
+}
+
+body.light-mode .profile h1,
+body.light-mode .profile h5,
+body.light-mode .profile h3,
+body.light-mode .typewriter::after{
+  color: #000;
+}
+
+
+body.light-mode .page-content h2{
+  border-color: #000;
+}
+
+body.light-mode header {
+  background-color: #eaeaea; /* ✅ Light background for header */
+  color: #000;
+}
+
+body.light-mode .profile {
+  background-color: transparent; /* In case .profile has a dark background */
+}
+
+body.light-mode .profile h1,
+body.light-mode .profile h5,
+body.light-mode .profile h3 {
+  color: #000 !important; /* Make sure text is readable */
+}
+
+body,
+.project-card,
+header,
+footer,
+.profile,
+.navbar {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
