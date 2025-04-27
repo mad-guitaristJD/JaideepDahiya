@@ -126,7 +126,7 @@ nav a:hover {
   background: #1f1f1f;
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+  transition: all 0.8s ease;
 }
 
 .project-card:hover {
@@ -150,10 +150,33 @@ nav a:hover {
 .project-slider {
   flex: 1;
   min-width: 300px;
-  max-width: 500px; /* 🔧 CONTROL SLIDER WIDTH HERE */
+  max-width: 500px;
+  height: 300px; /* ✨ FIXED HEIGHT */
   position: relative;
   overflow: hidden;
+  background: #111; /* Optional, looks good if image is smaller */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
+
+
+.project-slider img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* ✅ Ensures image fits properly */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-slider:hover img {
+  transform: scale(1.05);
+}
+
+
 
 /* 🔧 CONTROL IMAGE WIDTH/HEIGHT HERE */
 .slider-img {
@@ -349,6 +372,10 @@ body.light-mode .project-card {
   background-color: #ffffff;
   color: #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-slider {
+  background: #8a8484;
 }
 
 body.light-mode .navbar,

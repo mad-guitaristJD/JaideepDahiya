@@ -80,6 +80,7 @@ const projects = {
   ids: ["images/ids.jpeg", "images/ids2.jpeg", "images/ids3.jpeg"],
   angry: ["images/ang1.png", "images/ang2.png", "images/ang3.png","images/ang4.png","images/ang5.png"],
   bank: ["images/bank1.png", "images/bank2.png","images/bank3.png", "images/bank4.png"],
+  air_edge: ["images/air-edge2.png", "images/air-edge.png"],
 };
 
 document.querySelectorAll(".project-slider").forEach(slider => {
